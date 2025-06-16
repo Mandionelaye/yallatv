@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import * as echarts from 'echarts';
 
-const App = () => {
+const Exple = () => {
   const [activeTab, setActiveTab] = useState('accueil');
   const [activeFilter, setActiveFilter] = useState('tous');
   const [searchQuery, setSearchQuery] = useState('');

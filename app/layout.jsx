@@ -46,6 +46,24 @@ export default function RootLayout({ children }) {
     <html lang="fr">
        <head>
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+           {/* Script Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-M61SJDSTZD"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+        >{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-M61SJDSTZD', {
+            page_path: window.location.pathname,
+          });
+        `}</Script>
        </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

@@ -6,8 +6,8 @@ export async function generateMetadata({ params }) {
    const { id } = (await params) || params;
    const match = await getMatchById(id);
    
- const title = `${match.title} - Scores en Direct`;
-  const description = `Suivez le matchs de football ${match.title} ${match.videos[0].title === "Live Stream"? "en direct" : "en replay"} en temps-REAL sur Yallatv !`;
+ const title = `Suivez le match ${match.title} - sur yallatv`;
+  const description = `Suivez le match de football ${match.title} ${match.videos[0].title === "Live Stream"? "en direct" : "en replay"} en temps-REAL sur Yallatv !`;
 
     const baseUrl = process.env.NODE_ENV === "development"
   ? "http://localhost:3000"
